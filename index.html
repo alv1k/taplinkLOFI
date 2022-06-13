@@ -25,33 +25,115 @@
 			color:  lightblue;
 		}
 		.options{
-			height: 60px;
 			border-radius: 20px;
-			background-color: #008278;
 			margin-top: 20px;
+			text-align: center;
 		}
-		.container{
+		.blueBackground{			
+			background-color: #008278;
+		}
+		.price{
+			display: none;
+		}
+		.order{
+			display: none;
+		}
+		.video{
+			display: none;
+		}
+		.wallpaper{
+			display: none;
 		}
 	</style>
 </head>
-<body>
-	<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
-		<p class="allText">бомбочки для ванн в Якутске</p>
+<body class="body">
+	<div class="landing">
+		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
+			<p class="allText">бомбочки для ванн в Якутске</p>
+		</div>
+		<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
+			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
+			<p class="col allText col-md" style="color: black;">lofi homespa</p>
+		</div>
+		<div class="col-8 container mx-auto col-md-6 ">
+			<div class="options blueBackground priceButton allText">прайс </div>
+			<div class="options blueBackground allText orderButton">заказать</div>
+			<div class="options blueBackground allText videoButton">видео</div>
+			<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
+			<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
+		</div>
 	</div>
-	<div class="col  col-md " style="background-color: #89C6CE;height: 300px;text-align: center; padding-top: 40px; padding-bottom: 20px;">
-		<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
-		<p class="col allText col-md" style="color: black;">lofi homespa</p>
+	<div class="price">
+		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
+			<p class="allText landingButton">бомбочки для ванн в Якутске</p>
+		</div>
+		<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
+			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
+			<p class="col allText col-md" style="color: black;">lofi homespa</p>
+		</div>
+		<div class="col-8 mx-auto col-md-6 blueBackground options" style="">
+			<p class="options blueBackground allText p-5">
+				бомбочка 250 p.
+			</p>
+			<p class="options blueBackground allText" style="padding-bottom: 100px;">
+				бальзам для губ 140 p.
+			</p>
+		</div>
+
+		<div class="col-8 mx-auto  col-md-6 blueBackground options">
+			<p class="options blueBackground allText p-5">
+				цена указана с доставкой
+			</p>
+		</div>
+		<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 200px;">			
+			<div class="options blueBackground allText p-3">заказать</div>
+		</div>
 	</div>
-	<div class="col-8 container mx-auto col-md-6">
-		<div class="options allText">прайс</div>
-		<div class="options allText">заказать</div>
-		<div class="options allText">видео</div>
-		<div class="options allText">wallpaper</div>
-		<div class="options allText">instagram</div>
+	<div class="order">order
 	</div>
+	<div class="video">video
+	</div>
+	<div class="wallpaper">wallpaper
+	</div>
+	
 
 <script type="text/javascript">
-	
+	let landingPage = document.querySelector(".landing");
+	let pricePage = document.querySelector(".price");
+	let orderPage = document.querySelector(".order");
+	let videoPage = document.querySelector(".video");
+	let wallpaperPage = document.querySelector(".wallpaper");
+
+	let priceButton = document.querySelector(".priceButton");
+	priceButton.onclick = function(){
+		landingPage.style.display = "none";
+		pricePage.style.display = "block"
+	}
+
+	let orderButton = document.querySelector(".orderButton");
+	orderButton.onclick = function(){
+		landingPage.style.display = "none";
+		orderPage.style.display = "block"
+	}
+	let videoButton = document.querySelector(".videoButton");
+	videoButton.onclick = function(){
+		landingPage.style.display = "none";
+		videoPage.style.display = "block"
+	}
+	let wallpaperButton = document.querySelector(".wallpaperButton");
+	wallpaperButton.onclick = function(){
+		landingPage.style.display = "none";
+		wallpaperPage.style.display = "block"
+	}
+	let landingButton = document.querySelector(".landingButton");
+	landingButton.onclick = function(){
+		landingPage.style.display = "block";
+		wallpaperPage.style.display = "none"
+		videoPage.style.display = "none"
+		orderPage.style.display = "none"
+		pricePage.style.display = "none"
+	}
+
 </script>
 </body>
 </html>
