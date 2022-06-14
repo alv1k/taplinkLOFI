@@ -10,12 +10,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
 	<style type="text/css">
 		body{
 			background-image: url(1.jpg);
 			background-size: cover;
 			height: 600px;
 		}
+		@import '~pretty-checkbox/scss/variables';
+    	@import '~pretty-checkbox/scss/core';
 		.heading{
 			border-radius: 20px;
 			background-color: #008278;
@@ -47,26 +50,61 @@
 		.wallpaper{
 			display: none;
 		}
+		.input-line{
+			margin-bottom: 30px;
+			margin-left: 40px;
+		}
+		.form_radio{
+
+		}
+		.form_radio input[type=radio]{
+			display: none;
+		}
+
+		.form_radio label{
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			padding-left: 25px;
+			margin-right: 0;
+			line-height: 18px;
+			user-select: none;
+		}
+		.form_radio label:before {
+			content: "";
+			display: inline-block;
+			width: 17px;
+			height: 18px;
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+			background: url(radio-1.png) 0 0 no-repeat;
+		}
+		/* Checked */
+		.form_radio input[type=radio]:checked + label{
+			background: url(radio-2.png) 0 0 no-repeat;
+		}
+		 
+		/* Hover */
+		.form_radio label:hover:before {
+			filter: brightness(120%);
+		}
+		 
+		/* Disabled */
+		.form_radio input[type=radio]:disabled + label:before {
+			filter: grayscale(100%);
+		}
+
+		.videoimgDiv{
+			width: 200px;
+			border-radius: 20px;
+			background-color: #008278;
+		}
+
 	</style>
 </head>
 <body class="body">
-	<div class="landing">
-		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
-			<p class="allText">бомбочки для ванн в Якутске</p>
-		</div>
-		<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
-			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
-			<p class="col allText col-md" style="color: black;">lofi homespa</p>
-		</div>
-		<div class="col-8 container mx-auto col-md-6 ">
-			<div class="options blueBackground priceButton allText">прайс </div>
-			<div class="options blueBackground allText orderButton">заказать</div>
-			<div class="options blueBackground allText videoButton">видео</div>
-			<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
-			<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
-		</div>
-	</div>
-	<div class="price">
+	<div class="">
 		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
 			<p class="allText landingButton">бомбочки для ванн в Якутске</p>
 		</div>
@@ -74,30 +112,129 @@
 			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
 			<p class="col allText col-md" style="color: black;">lofi homespa</p>
 		</div>
-		<div class="col-8 mx-auto col-md-6 blueBackground options" style="">
-			<p class="options blueBackground allText p-2" style="font-size: 20px;">
-				бомбочка 250 p.
-			</p>
-			<p class="options blueBackground allText" style="padding-bottom: 20px;font-size: 20px;">
-				бальзам для губ 140 p.
-			</p>
+		<div class="landing col-8 container mx-auto col-md-6 ">
+			<div class="options blueBackground priceButton allText">прайс </div>
+			<div class="options blueBackground allText orderButton">заказать</div>
+			<div class="options blueBackground allText videoButton">видео</div>
+			<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
+			<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
 		</div>
 
-		<div class="col-8 mx-auto  col-md-6 blueBackground options">
-			<p class="options blueBackground allText p-2" style="font-size: 20px;">
-				цена указана с доставкой
-			</p>
+		<div class="price">		
+			<div class=" col-8 mx-auto col-md-6 blueBackground options" style="">
+				<p class="options blueBackground allText p-2" style="font-size: 20px;">
+					бомбочка 250 p.
+				</p>
+				<p class="options blueBackground allText" style="padding-bottom: 20px;font-size: 20px;">
+					бальзам для губ 140 p.
+				</p>
+			</div>
+
+			<div class="col-8 mx-auto  col-md-6 blueBackground options">
+				<p class="options blueBackground allText p-2" style="font-size: 20px;">
+					цена указана с доставкой
+				</p>
+			</div>
+			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
+				<div class="options blueBackground allText p-3" style="font-size: 50px">заказать</div>
+			</div>
+			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
+				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
+			</div>
 		</div>
-		<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 100px;">			
-			<div class="options blueBackground allText p-3">заказать</div>
+		<div class="order">
+			<div class="col-8 mx-auto  col-md-6 options blueBackground p-2" style="text-align: left;">
+				<div class="pretty p-default p-curve p-fill input-line" style="height: 10%">
+				    <input type="checkbox" class="bathbombChB" value="bathbomb">
+				    <div class="state">
+				      <label>бомбочка</label>
+				    </div>
+				</div>
+
+					<!-- //radio	 -->
+					<div class="radio col-7 mx-auto" style="display:none; margin-top: -20px">
+					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">		    	
+					    	<label>
+							    <input id="radio-1" type="radio" name="bathbomb" value="lightblue" checked>  голубой	цвет			    
+							</label>
+					    </div>
+					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">
+					    	
+							<label>
+							    <input id="radio-2" type="radio" name="bathbomb" value="blue" >  синий цвет			    
+							</label>
+					    </div>
+					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">
+					    	
+							<label>
+							    <input id="radio-3" type="radio" name="bathbomb" value="cyan" >  бирюзовый цвет		    
+							</label>
+					    </div>
+				    </div>
+
+		
+				<div class="pretty p-default p-curve p-fill input-line">
+				    <input type="checkbox" class="lipstick" value="lipstick">
+				    <div class="state">
+				      <label>бальзам для губ</label>
+				    </div>
+				</div>
+			</div>
+					
+			
+			    
+			<div class="whatUchoose col-8 mx-auto  col-md-6 blueBackground options">
+				<p class="whatUchoose_bathbomb"></p>
+				<p class="whatUchoose_lipstick"></p>
+			</div>
+
+
+			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
+				<div class="options blueBackground allText p-3" style="font-size: 50px">заказать</div>
+			</div>
+			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
+				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
+			</div>
+		</div>
+
+
+		<div class="video ">
+				<div class="mx-auto videoDiv options allText" style="font-size: 10px;">
+					На этой странице вы можете посмотреть как выглядит процесс растворения бомбочки в воде. 
+
+				</div>
+				<div class="mx-auto videoimgDiv mt-3">
+					<video width="200" height="200" controls="controls" poster="video/duel.jpg">
+					   <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+					   <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					   <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+					   Тег video не поддерживается вашим браузером.
+					   <a href="video/duel.mp4">Скачайте видео</a>.
+					</video>
+				</div>
+			
+		</div>
+		<div class="wallpaper">
+			<div class="mx-auto videoimgDiv options allText" style="font-size: 10px;">
+					На этой странице можно скачать обои на телефон. 
+
+			</div>
+			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
+				<img src="wallpaper/1.jpg" style="width: 200px; border-radius: 20px;">
+			</div>
+			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
+				<img src="wallpaper/2.jpg" style="width: 200px; border-radius: 20px;">
+			</div>
+			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
+				<img src="wallpaper/3.jpg" style="width: 200px; border-radius: 20px;">
+			</div>
+			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
+				<img src="wallpaper/4.jpg" style="width: 200px; border-radius: 20px;">
+			</div>
 		</div>
 	</div>
-	<div class="order">order
-	</div>
-	<div class="video">video
-	</div>
-	<div class="wallpaper">wallpaper
-	</div>
+	
+	
 	
 
 <script type="text/javascript">
@@ -106,6 +243,16 @@
 	let orderPage = document.querySelector(".order");
 	let videoPage = document.querySelector(".video");
 	let wallpaperPage = document.querySelector(".wallpaper");
+
+	let bathbombCheckbox = document.querySelector(".bathbombChB");
+	let radioDiv = document.querySelector(".radio");
+	let whatUchoose_bathbomb = document.querySelector(".whatUchoose_bathbomb");
+	let whatUchoose_lipstick = document.querySelector(".whatUchoose_lipstick");
+	let bombText = "я выбираю бомбочку ";
+	let biruzColor = "бирюзового цвета";
+	let golubColor = "голубого цвета";
+	let siniiColor = "синего цвета";
+	let lipstickCheckbox = document.querySelector(".lipstick");
 
 	let priceButton = document.querySelector(".priceButton");
 	priceButton.onclick = function(){
@@ -116,26 +263,47 @@
 	let orderButton = document.querySelector(".orderButton");
 	orderButton.onclick = function(){
 		landingPage.style.display = "none";
-		orderPage.style.display = "block"
+		orderPage.style.display = "block";
+		bathbombCheckbox.onclick = function(){
+			if (bathbombCheckbox.checked){
+				console.log("make an order");
+				radioDiv.style.display = "block"
+				//if(){
+					whatUchoose_bathbomb.innerHTML = bombText;
+				//}
+				
+			}else{
+				radioDiv.style.display = "none"
+				//whatUchoose_bathbomb.innerHTML = "Я передумал(а)";
+			}
+		}
+		
 	}
 	let videoButton = document.querySelector(".videoButton");
 	videoButton.onclick = function(){
 		landingPage.style.display = "none";
-		videoPage.style.display = "block"
+		videoPage.style.display = "block";
 	}
 	let wallpaperButton = document.querySelector(".wallpaperButton");
 	wallpaperButton.onclick = function(){
 		landingPage.style.display = "none";
 		wallpaperPage.style.display = "block"
 	}
-	let landingButton = document.querySelector(".landingButton");
-	landingButton.onclick = function(){
-		landingPage.style.display = "block";
-		wallpaperPage.style.display = "none"
-		videoPage.style.display = "none"
-		orderPage.style.display = "none"
-		pricePage.style.display = "none"
+	let landingButton = document.querySelectorAll(".landingButton");
+	for(let i = 0; i< landingButton.length; i++){
+		landingButton[i].onclick = function(){
+			landingPage.style.display = "block";
+			wallpaperPage.style.display = "none"
+			videoPage.style.display = "none"
+			orderPage.style.display = "none"
+			pricePage.style.display = "none"
+		}
 	}
+
+	
+
+
+	
 
 </script>
 </body>
