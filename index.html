@@ -31,7 +31,7 @@
 			color:  lightblue;
 		}
 		.options{
-			border-radius: 20px;
+			border-radius: 10px;
 			margin-top: 20px;
 			text-align: center;
 		}
@@ -54,46 +54,7 @@
 			margin-bottom: 30px;
 			margin-left: 40px;
 		}
-		.form_radio{
-
-		}
-		.form_radio input[type=radio]{
-			display: none;
-		}
-
-		.form_radio label{
-			display: inline-block;
-			cursor: pointer;
-			position: relative;
-			padding-left: 25px;
-			margin-right: 0;
-			line-height: 18px;
-			user-select: none;
-		}
-		.form_radio label:before {
-			content: "";
-			display: inline-block;
-			width: 17px;
-			height: 18px;
-			position: absolute;
-			left: 0;
-			bottom: 1px;
-			background: url(radio-1.png) 0 0 no-repeat;
-		}
-		/* Checked */
-		.form_radio input[type=radio]:checked + label{
-			background: url(radio-2.png) 0 0 no-repeat;
-		}
-		 
-		/* Hover */
-		.form_radio label:hover:before {
-			filter: brightness(120%);
-		}
-		 
-		/* Disabled */
-		.form_radio input[type=radio]:disabled + label:before {
-			filter: grayscale(100%);
-		}
+		
 
 		.videoimgDiv{
 			width: 200px;
@@ -105,19 +66,22 @@
 </head>
 <body class="body">
 	<div class="">
-		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto">
-			<p class="allText landingButton">бомбочки для ванн в Якутске</p>
-		</div>
-		<div class="col  col-md " style="background-color: #89C6CE80;text-align: center; padding-top: 40px; padding-bottom: 20px;">
+		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto landingButton" style="text-align:center;">
 			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
-			<p class="col allText col-md" style="color: black;">lofi home spa</p>
+			<p class="col allText col-md" style="color: lightblue;">lofi home spa</p>
 		</div>
-		<div class="landing col-8 container mx-auto col-md-6 ">
-			<div class="options blueBackground priceButton allText">прайс </div>
-			<div class="options blueBackground allText orderButton">заказать</div>
-			<div class="options blueBackground allText videoButton">видео</div>
-			<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
-			<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
+		<div class="landing col-12 container col-md-12 ">
+			<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
+				<p class="allText" style="color: #008278">бомбочки для ванн в Якутске</p>
+			</div>
+			<div class="col-8 mx-auto col-md-6">
+				<div class="options blueBackground priceButton allText">прайс </div>
+				<div class="options blueBackground allText orderButton">заказать</div>
+				<div class="options blueBackground allText videoButton">видео</div>
+				<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
+				<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
+			</div>
+			
 		</div>
 
 		<div class="price">		
@@ -136,7 +100,7 @@
 				</p>
 			</div>
 			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3" style="font-size: 50px">заказать</div>
+				<div class="options blueBackground allText p-3 orderFromPrice" style="font-size: 50px">заказать</div>
 			</div>
 			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
 				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
@@ -144,6 +108,10 @@
 		</div>
 		<div class="order">
 			<div class="col-8 mx-auto  col-md-6 options blueBackground p-2" style="text-align: left;">
+				<div class="mx-auto videoimgDiv options allText mb-5" style="font-size: 10px;">
+					На этой странице можно скачать сделать заказ и отправить его на сбор. Выберите то, что вам нужно.
+
+				</div>
 				<div class="pretty p-default p-curve p-fill input-line" style="height: 10%">
 				    <input type="checkbox" class="bathbombChB" value="bathbomb">
 				    <div class="state">
@@ -152,22 +120,22 @@
 				</div>
 
 					<!-- //radio	 -->
-					<div class="radio col-7 mx-auto" style="display:none; margin-top: -20px">
-					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">		    	
+					<div class="radio col-7 mx-auto" style=" margin-top: -20px">
+					    <div class="options blueBackground allText mt-0" style="font-size: 20px; text-align:left; ">		    	
 					    	<label>
-							    <input id="radio-1" type="radio" name="bathbomb" value="lightblue" checked>  голубой	цвет			    
+							    <input class="color1" id="radio-1" type="radio" name="bathbomb" value="lightblue">  голубой	цвет			    
 							</label>
 					    </div>
-					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">
+					    <div class="options blueBackground allText mt-0 " style="font-size: 20px; text-align:left; ">
 					    	
 							<label>
-							    <input id="radio-2" type="radio" name="bathbomb" value="blue" >  синий цвет			    
+							    <input class="color2" id="radio-2" type="radio" name="bathbomb" value="blue" >  синий цвет			    
 							</label>
 					    </div>
-					    <div class="options blueBackground allText mt-0 form_radio" style="font-size: 20px; text-align:left; ">
+					    <div class="options blueBackground allText mt-0 " style="font-size: 20px; text-align:left; ">
 					    	
 							<label>
-							    <input id="radio-3" type="radio" name="bathbomb" value="cyan" >  бирюзовый цвет		    
+							    <input class="color3" id="radio-3" type="radio" name="bathbomb" value="cyan">  бирюзовый цвет		    
 							</label>
 					    </div>
 				    </div>
@@ -183,11 +151,16 @@
 					
 			
 			    
-			<div class="whatUchoose col-8 mx-auto  col-md-6 blueBackground options">
-				<p class="whatUchoose_bathbomb"></p>
-				<p class="whatUchoose_lipstick"></p>
+			<div class="whatUchoose col-8 mx-auto  col-md-6 blueBackground options" style="transition: 2s;">
+				<p class="allText">я выбираю</p>
+				<p class="whatUchoose_bathbomb allText" style="font-size: 15px;"></p>
+				<p class="whatUchoose_lipstick allText" style="font-size: 15px;"></p>
+				<p class="orderPriceTotal allText"></p>
 			</div>
 
+			<div class="col-8 mx-auto  col-md-6 blueBackground options">+7
+				<input type="tel" name="phone" placeholder="телефон для связи" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+			</div>
 
 			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
 				<div class="options blueBackground allText p-3" style="font-size: 50px">заказать</div>
@@ -199,10 +172,11 @@
 
 
 		<div class="video ">
-				<div class="mx-auto videoDiv options allText" style="font-size: 10px;">
+				<div class="mx-auto videoimgDiv options allText" style="font-size: 10px;">
 					На этой странице вы можете посмотреть как выглядит процесс растворения бомбочки в воде. 
 
 				</div>
+
 				<div class="mx-auto videoimgDiv mt-3">
 					<video width="200" height="200" controls="controls" poster="video/1.mp4" style=" border-radius: 20px;">
 					   <source src="video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -267,36 +241,98 @@
 	let radioDiv = document.querySelector(".radio");
 	let whatUchoose_bathbomb = document.querySelector(".whatUchoose_bathbomb");
 	let whatUchoose_lipstick = document.querySelector(".whatUchoose_lipstick");
-	let bombText = "я выбираю бомбочку ";
+	let bombText = " бомбочку ";
+	let lipText = "бальзам для губ";
 	let biruzColor = "бирюзового цвета";
 	let golubColor = "голубого цвета";
 	let siniiColor = "синего цвета";
 	let lipstickCheckbox = document.querySelector(".lipstick");
 
+	let orderPriceTotal = document.querySelector(".orderPriceTotal")
+	let orderPriceTotal_sum = 0;
+	let bathbomb_price = 250;
+	let lipstick_price = 140;
+
+	let summOfOrder = function(){
+		if(bathbombCheckbox.checked){
+			orderPriceTotal_sum = orderPriceTotal_sum + bathbomb_price;
+			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+		}
+		if(lipstickCheckbox.checked){
+			orderPriceTotal_sum = orderPriceTotal_sum + lipstick_price;
+			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+		}
+	}
+	let minusOfOrderBomb = function(){
+		orderPriceTotal_sum = orderPriceTotal_sum - bathbomb_price;
+		orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+	}
+	let minusOfOrderLip = function(){
+		orderPriceTotal_sum = orderPriceTotal_sum - lipstick_price;
+		orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+	}
+
 	let priceButton = document.querySelector(".priceButton");
+	let howMuchSeePrice = 0;
 	priceButton.onclick = function(){
 		landingPage.style.display = "none";
-		pricePage.style.display = "block"
+		pricePage.style.display = "block";
+		howMuchSeePrice++;
+	}
+	let color1 = document.querySelector(".color1");
+	let color2 = document.querySelector(".color2");
+	let color3 = document.querySelector(".color3");
+	let makeAnOrder = function(){
+		summOfOrder();
+		bathbombCheckbox.onclick = function(){
+			if (bathbombCheckbox.checked){
+				whatUchoose_bathbomb.innerHTML = bombText;
+				color1.onclick = function(){
+					if(color1.checked){
+						whatUchoose_bathbomb.innerHTML = bombText + "голубого цвета";
+					}
+				}
+				color2.onclick = function(){
+					if(color2.checked){
+						whatUchoose_bathbomb.innerHTML = bombText + "синего цвета";
+					}
+				}
+				color3.onclick = function(){
+					if(color3.checked){
+						whatUchoose_bathbomb.innerHTML = bombText + "бирюзового цвета";
+					}
+				}
+			}else{
+				whatUchoose_bathbomb.innerHTML = "";
+				minusOfOrderBomb();
+			}
+		}
+		lipstickCheckbox.onclick = function(){
+			if(lipstickCheckbox.checked){
+				summOfOrder();
+				whatUchoose_lipstick.innerHTML = lipText;
+			}else{
+				whatUchoose_lipstick.innerHTML = "";
+				minusOfOrderLip();
+			}
+		}
 	}
 
 	let orderButton = document.querySelector(".orderButton");
+	let howMuchJustOrder = 0;
 	orderButton.onclick = function(){
 		landingPage.style.display = "none";
 		orderPage.style.display = "block";
-		bathbombCheckbox.onclick = function(){
-			if (bathbombCheckbox.checked){
-				console.log("make an order");
-				radioDiv.style.display = "block"
-				//if(){
-					whatUchoose_bathbomb.innerHTML = bombText;
-				//}
-				
-			}else{
-				radioDiv.style.display = "none"
-				//whatUchoose_bathbomb.innerHTML = "Я передумал(а)";
-			}
-		}
-		
+		makeAnOrder();
+		howMuchJustOrder++;
+	}
+	let orderFromPrice = document.querySelector(".orderFromPrice");
+	let howMuchOrderFromPrice = 0;
+	orderFromPrice.onclick = function(){
+		pricePage.style.display = "none"
+		orderPage.style.display = "block";
+		makeAnOrder();
+		howMuchOrderFromPrice++;
 	}
 	let videoButton = document.querySelector(".videoButton");
 	videoButton.onclick = function(){
