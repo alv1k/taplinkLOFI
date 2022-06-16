@@ -38,18 +38,7 @@
 		.blueBackground{			
 			background-color: #008278;
 		}
-		.price{
-			display: none;
-		}
-		.order{
-			display: none;
-		}
-		.video{
-			display: none;
-		}
-		.wallpaper{
-			display: none;
-		}
+		
 		.input-line{
 			margin-bottom: 30px;
 			margin-left: 40px;
@@ -57,7 +46,6 @@
 		
 
 		.videoimgDiv{
-			width: 200px;
 			border-radius: 20px;
 			background-color: #008278;
 		}
@@ -67,149 +55,81 @@
 <body class="body">
 	<div class="">
 		<div class="col-8 heading mx-auto p-2 col-md-6 mx-md-auto landingButton" style="text-align:center;">
-			<img class="col-6 col-sm-4 col-md-3" src="1.svg" >
+			<img class="col-6 col-sm-4 col-md-3" src="1.png" >
 			<p class="col allText col-md" style="color: lightblue;">lofi home spa</p>
 		</div>
-		<div class="landing col-12 container col-md-12 ">
-			<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
-				<p class="allText" style="color: #008278">бомбочки для ванн в Якутске</p>
-			</div>
-			<div class="col-8 mx-auto col-md-6">
-				<div class="options blueBackground priceButton allText">прайс </div>
-				<div class="options blueBackground allText orderButton">заказать</div>
-				<div class="options blueBackground allText videoButton">видео</div>
-				<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
-				<div class="options blueBackground allText instagramButton"><a style="text-decoration: none; color: lightblue" href="https://www.instagram.com"> instagram</a></div>
-			</div>
-			
+
+		<div class="col  col-md " style="background-color: #89C6CE;text-align: center; padding-top: 40px; padding-bottom: 20px;">
+			<p class="allText" style="color: #008278">бомбочки для ванн в Якутске</p>
 		</div>
-
-		<div class="price">		
-			<div class=" col-8 mx-auto col-md-6 options" style="">
-				<p class="options blueBackground allText p-2" style="font-size: 20px;">
-					бомбочка 250 p.
-				</p>
-				<p class="options blueBackground allText" style="padding-bottom: 20px;font-size: 20px;">
-					бальзам для губ 140 p.
-				</p>
-			</div>
-
-			<div class="col-8 mx-auto  col-md-6 blueBackground options">
-				<p class="options blueBackground allText p-2" style="font-size: 20px;">
-					цена указана с доставкой
-				</p>
-			</div>
-			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3 orderFromPrice" style="font-size: 50px">заказать</div>
-			</div>
-			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
+		<div class="col-8 mx-auto col-md-6">
+			<div class="options blueBackground priceButton allText">прайс 
+				<div class=" col-8 mx-auto col-md-6 options" style="">
+					<p class="options blueBackground allText p-2" style="font-size: 20px;">
+						бомбочка 250 p.
+					</p>
+					<p class="options blueBackground allText" style="font-size: 20px;">
+						бальзам для губ 140 p.
+					</p>
+					<p class="options blueBackground allText p-2" style="font-size: 10px;">
+						цена указана с доставкой
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="order">
-			<div class="col-8 mx-auto  col-md-6 options blueBackground p-2" style="text-align: left;">
-				<div class="mx-auto videoimgDiv options allText mb-5" style="font-size: 10px;">
-					На этой странице можно скачать сделать заказ и отправить его на сбор. Выберите то, что вам нужно.
+		<div class="col-8 mx-auto  col-md-6 options blueBackground p-2" style="text-align: left;">
+				
+			<!-- <div class="pretty p-default p-curve p-fill input-line" style="height: 10%">
+			    <input type="checkbox" class="bathbombChB" value="bathbomb">
+			    <div class="state">
+			      <label>бомбочка</label>
+			    </div>
+			</div>
 
+	
+			<div class="pretty p-default p-curve p-fill input-line">
+			    <input type="checkbox" class="lipstick" value="lipstick">
+			    <div class="state">
+			      <label>бальзам для губ</label>
+			    </div>
+			</div> -->
+			<form action="#" method="POST" class="phone_form">
+				<textarea class="col-8 mx-auto options col-md-6 allText p-1" wrap="soft" style="color: darkblue; font-size: 15px; text-align: left; display: block;border-style: none;" placeholder="ваш заказ" name="orderText" ></textarea>
+				<div style="text-align: center;" class="col-11 col-md-6 mx-auto mx-md-auto user_phone">
+					<input class="allText p-1" type="tel" name="phone" id="user_phone" placeholder="(___) ___ __ __" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required style="border-radius: 10px; margin-top: 20px; font-size: 15px; border-style: none; margin-bottom: 5px;">
 				</div>
-				<div class="pretty p-default p-curve p-fill input-line" style="height: 10%">
-				    <input type="checkbox" class="bathbombChB" value="bathbomb">
-				    <div class="state">
-				      <label>бомбочка</label>
-				    </div>
+
+				<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
+					<div class="options blueBackground allText p-3"style="font-size: 50px">заказать</div>
 				</div>
-
-					<!-- //radio	 -->
-					<div class="radio col-7 mx-auto" style=" margin-top: -20px">
-					    <div class="options blueBackground allText mt-0" style="font-size: 20px; text-align:left; ">		    	
-					    	<label>
-							    <input class="color1" id="radio-1" type="radio" name="bathbomb" value="lightblue">  голубой	цвет			    
-							</label>
-					    </div>
-					    <div class="options blueBackground allText mt-0 " style="font-size: 20px; text-align:left; ">
-					    	
-							<label>
-							    <input class="color2" id="radio-2" type="radio" name="bathbomb" value="blue" >  синий цвет			    
-							</label>
-					    </div>
-					    <div class="options blueBackground allText mt-0 " style="font-size: 20px; text-align:left; ">
-					    	
-							<label>
-							    <input class="color3" id="radio-3" type="radio" name="bathbomb" value="cyan">  бирюзовый цвет		    
-							</label>
-					    </div>
-				    </div>
-
+			</form>	
+		</div>
+		<div class="col-8 mx-auto  col-md-6 blueBackground options">
+				
+		</div>	
 		
-				<div class="pretty p-default p-curve p-fill input-line">
-				    <input type="checkbox" class="lipstick" value="lipstick">
-				    <div class="state">
-				      <label>бальзам для губ</label>
-				    </div>
+		<div class="video" style="margin-top: 70px;">
+				<div class="options blueBackground allText videoButton">видео</div>
+				<div class=" col-8 mx-auto  col-md-6  mt-3">
+					<img style=" border-radius: 20px; border: 2px solid black; text-align: center;" src="videobb/2-1.gif" class="col">					
 				</div>
-			</div>
-					
-			
-			    
-			<div class="whatUchoose col-8 mx-auto  col-md-6 blueBackground options" style="transition: 2s;">
-				<p class="allText">я выбираю</p>
-				<p class="whatUchoose_bathbomb allText" style="font-size: 15px;"></p>
-				<p class="whatUchoose_lipstick allText" style="font-size: 15px;"></p>
-				<p class="orderPriceTotal allText"></p>
-			</div>
-
-			<div class="col-8 mx-auto  col-md-6 blueBackground options">+7
-				<input type="tel" name="phone" placeholder="телефон для связи" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-			</div>
-
-			<div class="col-9 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3" style="font-size: 50px">заказать</div>
-			</div>
-			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
-			</div>
-		</div>
-
-
-		<div class="video ">
-				<div class="mx-auto videoimgDiv options allText" style="font-size: 10px;">
-					На этой странице вы можете посмотреть как выглядит процесс растворения бомбочки в воде. 
-
+				<div class="col-8 mx-auto  col-md-6   mt-3">
+					<img style=" border-radius: 20px; border: 2px solid black; text-align: center;" src="videobb/3-1.gif" class="col">	
+				</div>
+				<div class="col-8 mx-auto  col-md-6  mt-3">
+					<img style=" border-radius: 20px; border: 2px solid black; text-align: center;" src="videobb/6-1.gif" class="col">	
+				</div>
+				<div class="col-8 mx-auto  col-md-6  mt-3">
+					<img style=" border-radius: 20px; border: 2px solid black; text-align: center;" src="videobb/8-1.gif" class="col">	
 				</div>
 
-				<div class="mx-auto videoimgDiv mt-3">
-					<video width="200" height="200" controls="controls" poster="video/1.mp4" style=" border-radius: 20px;">
-					   <source src="video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					   Тег video не поддерживается вашим браузером.
-					   <a href="video/1.mp4">Скачайте видео</a>.
-					</video>
-				</div>
-				<div class="mx-auto videoimgDiv mt-3">
-					<video width="200" height="200" controls="controls" poster="video/2.jpg" style=" border-radius: 20px;">
-					   <source src="video/2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					   Тег video не поддерживается вашим браузером.
-					   <a href="video/duel.mp4">Скачайте видео</a>.
-					</video>
-				</div>
-				<div class="mx-auto videoimgDiv mt-3">
-					<video width="200" height="200" controls="controls" poster="video/3.jpg" style=" border-radius: 20px;">
-					   <source src="video/3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					   Тег video не поддерживается вашим браузером.
-					   <a href="video/duel.mp4">Скачайте видео</a>.
-					</video>
-				</div>
-
-			<div class="col-8 mx-auto  col-md-6 blueBackground options" style="margin-top: 50px;">			
-				<div class="options blueBackground allText p-3 landingButton" >вернуться</div>
-			</div>
 			
 		</div>
 		<div class="wallpaper">
-			<div class="mx-auto videoimgDiv options allText" style="font-size: 10px;">
-					На этой странице можно скачать обои на телефон. 
 
-			</div>
-			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
+			<div class="options blueBackground allText wallpaperButton">обои на телефон</div>
+			
+			<!-- <div class="mx-auto imgDiv mt-3" style="width: 200px;">
 				<img src="wallpaper/1.jpg" style="width: 200px; border-radius: 20px;">
 			</div>
 			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
@@ -217,14 +137,32 @@
 			</div>
 			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
 				<img src="wallpaper/3.jpg" style="width: 200px; border-radius: 20px;">
+			</div> -->
+			<div class="mx-auto imgDiv mt-3 col-8 mx-auto  col-md-6 " >
+				<img src="wallpaper/3-1.jpg" class="col-12" style="border-radius: 20px;border: 2px solid black;">
 			</div>
-			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
-				<img src="wallpaper/3-1.jpg" style="width: 200px; border-radius: 20px;">
+			<div class="mx-auto imgDiv mt-3 col-8 mx-auto  col-md-6 ">
+				<img src="wallpaper/4-1.jpg" class="col-12"  style="border-radius: 20px;border: 2px solid black;">
 			</div>
-			<div class="mx-auto imgDiv mt-3" style="width: 200px;">
-				<img src="wallpaper/4.jpg" style="width: 200px; border-radius: 20px;">
+			<div class="mx-auto imgDiv mt-3 col-8 mx-auto  col-md-6 " >
+				<img src="wallpaper/2-1.jpg" class="col-12"  style="border-radius: 20px;border: 2px solid black;">
 			</div>
 		</div>
+
+			<div class=" col-8 mx-auto col-md-6 options blueBackground allText p-2">
+				<p style="margin: 0px;">напиши мне:</p>
+				
+				<a style="text-decoration: none; color: lightblue" href="https://www.instagram.com">
+					<img src="whatsapp.png" class="col-1"> 
+				</a>
+				<a style="text-decoration: none; color: lightblue; margin-left: 20px;" href="https://www.instagram.com">
+					<img src="telegram.png" class="col-1">
+				</a>
+				<a style="text-decoration: none; color: lightblue; margin-left: 20px;" href="https://www.instagram.com">
+					<img src="instagram.png" class="col-1">
+				</a>
+
+			</div>
 	</div>
 	
 	
@@ -232,21 +170,18 @@
 
 <script type="text/javascript">
 	let landingPage = document.querySelector(".landing");
-	let pricePage = document.querySelector(".price");
-	let orderPage = document.querySelector(".order");
-	let videoPage = document.querySelector(".video");
-	let wallpaperPage = document.querySelector(".wallpaper");
+	// let pricePage = document.querySelector(".price");
+	// let orderPage = document.querySelector(".order");
+	// let videoPage = document.querySelector(".video");
+	// let wallpaperPage = document.querySelector(".wallpaper");
 
-	let bathbombCheckbox = document.querySelector(".bathbombChB");
-	let radioDiv = document.querySelector(".radio");
+	//let bathbombCheckbox = document.querySelector(".bathbombChB");
+	//let radioDiv = document.querySelector(".radio");
 	let whatUchoose_bathbomb = document.querySelector(".whatUchoose_bathbomb");
 	let whatUchoose_lipstick = document.querySelector(".whatUchoose_lipstick");
 	let bombText = " бомбочку ";
 	let lipText = "бальзам для губ";
-	let biruzColor = "бирюзового цвета";
-	let golubColor = "голубого цвета";
-	let siniiColor = "синего цвета";
-	let lipstickCheckbox = document.querySelector(".lipstick");
+	//let lipstickCheckbox = document.querySelector(".lipstick");
 
 	let orderPriceTotal = document.querySelector(".orderPriceTotal")
 	let orderPriceTotal_sum = 0;
@@ -257,103 +192,37 @@
 		if(bathbombCheckbox.checked){
 			orderPriceTotal_sum = orderPriceTotal_sum + bathbomb_price;
 			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+		}else{
+			orderPriceTotal_sum = orderPriceTotal_sum - bathbomb_price;
+			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
 		}
 		if(lipstickCheckbox.checked){
 			orderPriceTotal_sum = orderPriceTotal_sum + lipstick_price;
 			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
+		}else{
+			orderPriceTotal_sum = orderPriceTotal_sum - lipstick_price;
+			orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
 		}
 	}
-	let minusOfOrderBomb = function(){
-		orderPriceTotal_sum = orderPriceTotal_sum - bathbomb_price;
-		orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
-	}
-	let minusOfOrderLip = function(){
-		orderPriceTotal_sum = orderPriceTotal_sum - lipstick_price;
-		orderPriceTotal.innerHTML = orderPriceTotal_sum + " p."
-	}
-
-	let priceButton = document.querySelector(".priceButton");
-	let howMuchSeePrice = 0;
-	priceButton.onclick = function(){
-		landingPage.style.display = "none";
-		pricePage.style.display = "block";
-		howMuchSeePrice++;
-	}
-	let color1 = document.querySelector(".color1");
-	let color2 = document.querySelector(".color2");
-	let color3 = document.querySelector(".color3");
+	
 	let makeAnOrder = function(){
-		summOfOrder();
 		bathbombCheckbox.onclick = function(){
 			if (bathbombCheckbox.checked){
 				whatUchoose_bathbomb.innerHTML = bombText;
-				color1.onclick = function(){
-					if(color1.checked){
-						whatUchoose_bathbomb.innerHTML = bombText + "голубого цвета";
-					}
-				}
-				color2.onclick = function(){
-					if(color2.checked){
-						whatUchoose_bathbomb.innerHTML = bombText + "синего цвета";
-					}
-				}
-				color3.onclick = function(){
-					if(color3.checked){
-						whatUchoose_bathbomb.innerHTML = bombText + "бирюзового цвета";
-					}
-				}
+				
 			}else{
 				whatUchoose_bathbomb.innerHTML = "";
-				minusOfOrderBomb();
 			}
 		}
 		lipstickCheckbox.onclick = function(){
 			if(lipstickCheckbox.checked){
-				summOfOrder();
 				whatUchoose_lipstick.innerHTML = lipText;
 			}else{
 				whatUchoose_lipstick.innerHTML = "";
-				minusOfOrderLip();
 			}
 		}
 	}
 
-	let orderButton = document.querySelector(".orderButton");
-	let howMuchJustOrder = 0;
-	orderButton.onclick = function(){
-		landingPage.style.display = "none";
-		orderPage.style.display = "block";
-		makeAnOrder();
-		howMuchJustOrder++;
-	}
-	let orderFromPrice = document.querySelector(".orderFromPrice");
-	let howMuchOrderFromPrice = 0;
-	orderFromPrice.onclick = function(){
-		pricePage.style.display = "none"
-		orderPage.style.display = "block";
-		makeAnOrder();
-		howMuchOrderFromPrice++;
-	}
-	let videoButton = document.querySelector(".videoButton");
-	videoButton.onclick = function(){
-		landingPage.style.display = "none";
-		videoPage.style.display = "block";
-	}
-	let wallpaperButton = document.querySelector(".wallpaperButton");
-	wallpaperButton.onclick = function(){
-		landingPage.style.display = "none";
-		wallpaperPage.style.display = "block"
-	}
-	let landingButton = document.querySelectorAll(".landingButton");
-	for(let i = 0; i< landingButton.length; i++){
-		landingButton[i].onclick = function(){
-			landingPage.style.display = "block";
-			wallpaperPage.style.display = "none"
-			videoPage.style.display = "none"
-			orderPage.style.display = "none"
-			pricePage.style.display = "none"
-		}
-	}
 
 	
 
