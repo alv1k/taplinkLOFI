@@ -1,3 +1,3 @@
 # taplinkLOFI
 
-![alt text](http://url/to/screen.png)
+![alt text](https://github.com/alv1k/taplinkLOFI/screen.jpg?raw=true)
