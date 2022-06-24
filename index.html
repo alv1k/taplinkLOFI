@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<style type="text/css">
 		body{
@@ -55,6 +56,16 @@
 		    outline: 2px dashed rgba(255,255,255,0.8); /* Пунктирная рамка */
 		    outline-offset: -5px; /* Выводим рамку внутри элемента */
 		}
+		.d-none{
+			display: none;
+		}
+		.bombSize{
+			height: 50px;
+		}
+
+		.relative{
+			position: relative;
+		}
 
 	</style>
 </head>
@@ -62,7 +73,7 @@
 	<div class="">
 		<div class="row pt-md-3">			
 			<div class="col-8 mx-auto p-2 heading col-md-8 landingButton" style="text-align:center;">
-				<img class="col-6 col-sm-4 col-md-3" src="1.png" >
+				<img class="col-6 col-sm-4 col-md-3" src="LOGO 20.06.png" >
 				<p class="col allText col-md" style="color: lightblue;">lofi home spa</p>
 			</div>
 
@@ -88,20 +99,108 @@
 				<p class="allText" style="color: #008278">бомбочки для ванн в Якутске</p>
 			</div>
 		</div>		
-		<div class="col-8 mx-auto  col-md-8 ms-md-auto  options blueBackground p-2">
-			<a style="text-align: left; color: lightblue; text-decoration: none" href="https://skobelkin.ru/whatsapp/79142364278?text=Я+хочу+сделать+заказ.">Связаться для оформления заказа</a>
+		<div class="row col-md-8 ms-md-auto  options blueBackground p-2 chooseAll">
+				<div class="col-6 row" style="text-align: left">
+					<div class="col-4 ">
+						<div>
+							<img src="img/1.bmp" class="bombSize lightBlueBomb">
+							
+						</div>
+						<div>
+							<img src="img/2.bmp" class="bombSize cyanBomb">
+						</div>
+						<div>
+							<img src="img/3.bmp" class="bombSize blueBomb">
+						</div>
+
+						<div>
+							<img src="img/3.bmp" class="bombSize balm"> 
+						</div>
+					</div>
+					<div class="col-6">
+						<div>
+							<p class="allText col-4 lightBlueBomb relative fs-4" style="">голубая</p>
+						</div>
+						<div>
+							<p class="allText col-4 cyanBomb relative fs-4" name="cyanBomb" style="">бирюзовая</p>
+						</div>
+						<div>
+							<p class="allText col-4 blueBomb relative fs-4" style="">синяя</p>
+						</div>
+
+						<div>
+							<p class="allText col-4 balm relative fs-4" style="">бальзам</p>
+						</div>
+					</div>
+					<div class="col-2">
+						<div>
+							<p class="allText col-4 bombCountLinghtBlue relative fs-4" style="">0 </p>
+						</div>
+						<div>
+							<p class="allText col-4 bombCountCyan relative fs-4" style="">0 </p>
+						</div>
+						<div>
+							<p class="allText col-4 bombCountBlue relative fs-4" style="">0 </p>
+						</div>
+
+						<div>
+							<p class="allText col-4 balmCount relative fs-4" style="">0 </p>
+						</div>
+					</div>
+					
+
+
+					<div class="clearCart allText">очистить</div>
+				</div>
+
+				<div class="col-6">
+					<div style="margin-bottom: 30%; margin-top: 20%;" class="allText itogo">0р.</div>
+					<a class="allText blueBackground submit" style="color: lightblue;  border-radius: 20px;">подтвердить</a>
+					
+				</div>
+					
 		</div>
+		<div class="row col-md-8 ms-md-auto  options  p-2 choosenAll" style="display: none;">
+			<div class="mt-2 blueBackground">
+				<p class="allText">Вы выбрали</p> 
+				<p class="d-none bombDiv allText" style="font-size:16px;"><span class="howMuchBombs "> </span><span class="bathBombWordColor"></span><span class="bathBombWord"></span></p>
+				<p class="d-none balmDiv allText" style="font-size:16px;"><span class="howMuchBalms "> </span><span class="balmWord"></span></p>
+				<p class="allText">Общая сумма <span class="itogo"></span></p>
+			</div>
+			
+			<div class="mt-2 blueBackground">
+				<p class="allText" style="font-size:16px;">Произведите оплату через СБП </p>
+				<p class="allText" style="font-size:16px;">по номеру телефона на карту Сбарбанк/Тинькофф</p>
+				  <div class="coupon-row">
+				    <p class="coupon-field allText" id="coupon-field">89142364278</p><button class="coupon-btn">Копировать номер телефона</button>
+					<p class="allText" style="font-size:16px;">Получатель: Алексеева Алена В.</p>
+				  </div>
+					
+			</div>
+			
+			<div class="coupon blueBackground">
+			  
+				<a class="allText border contactDeliveryDetails" style="font-size:16px;" href="https://wa.clck.bar/79142364278?text=Здравствуйте,%20я оплатил(а) заказ, адрес доставки:%20">Связаться для уточнения деталей доставки</a>
+			</div>
+
+
+		</div>
+
+
+
 		<div class="col-md-8 mx-auto">
 			<div class="video col-8 mx-auto col-md-12" style="margin-top: 20px;">
 				<div class="col-12 options blueBackground allText col-md-12 mx-auto">видео</div>
 					<div class="col-10 mx-auto mt-3 col-md-12" style="text-align: center;">
-						<img style=" border-radius: 20px;" src="videobb/1-2.gif" class="col-5 col-md-2 dashed">	
-						<img style=" border-radius: 20px;" src="videobb/2-2.gif" class="col-5 col-md-2 dashed">	
-						<img style=" border-radius: 20px;" src="videobb/3-2.gif" class="col-5 col-md-2 mt-2 dashed">
-						<img style=" border-radius: 20px;" src="videobb/4-2.gif" class="col-5 col-md-2 mt-2 dashed">	
+						<img style=" border-radius: 20px;" src="videobb/1-2.jpg" class="col-5 col-md-2 dashed click1">	
+						<img style=" border-radius: 20px;" src="videobb/1-2.gif" class="col-5 col-md-2 dashed clicked1 d-none">	
+						<img style=" border-radius: 20px;" src="videobb/2-2.jpg" class="col-5 col-md-2 dashed click2">		
+						<img style=" border-radius: 20px;" src="videobb/2-2.gif" class="col-5 col-md-2 dashed clicked2 d-none">	
+						<img style=" border-radius: 20px;" src="videobb/3-2.jpg" class="col-5 col-md-2 mt-2 dashed click3">	
+						<img style=" border-radius: 20px;" src="videobb/3-2.gif" class="col-5 col-md-2 mt-2 dashed clicked3 d-none">
+						<img style=" border-radius: 20px;" src="videobb/4-2.jpg" class="col-5 col-md-2 mt-2 dashed click4">
+						<img style=" border-radius: 20px;" src="videobb/4-2.gif" class="col-5 col-md-2 mt-2 dashed clicked4 d-none">	
 					</div>
-				
-
 				
 			</div>
 			<div class="wallpaper col-8 col-md-12 mx-auto"style="margin-top: 30px;">
@@ -129,7 +228,7 @@
 		<div class=" col-8 mx-auto col-md-6 options blueBackground allText p-2" style="margin-top: 70px;">
 			<p class="col-12 options blueBackground allText col-md-8 mx-auto" style="margin: 0px;">напишите нам:</p>
 			
-			<a style="text-decoration: none; color: lightblue" href="https://skobelkin.ru/whatsapp/79142364278?text=https://skobelkin.ru/whatsapp/7914234278">
+			<a style="text-decoration: none; color: lightblue" href="https://wa.clck.bar/79142364278?text=Здравствуйте,%20">
 				<img src="whatsapp.png" class="col-1"> 
 			</a>
 			<a style="text-decoration: none; color: lightblue; margin-left: 20px;" href="https://t-do.ru/al_v1k">
@@ -142,7 +241,9 @@
 		</div>
 	</div>
 	
-	
+	<script src="script.js" >
+		
+	</script>
 	
 </body>
 </html>
