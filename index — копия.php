@@ -133,7 +133,7 @@
 						</div>
 					</div>
 					<div class="col-2">
-						<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+						<form action="" method="get">
 						<div>
 							<p class="allText col-4 bombCountLinghtBlue relative fs-4" name="howMuchBombsLB" style="">0 </p>
 						</div>
